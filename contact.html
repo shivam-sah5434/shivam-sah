@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Contact Me | Shivam Sah</title>
+<meta name="description" content="Portfolio website of Shivam Sah, Chemical Engineering student at Pulchowk Campus.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <a href="index.html" aria-label="Shivam Sah home"><img class="logo" src="assets/logo.jpg" alt="Shivam Sah logo"></a>
+  <nav class="nav" aria-label="Main navigation">
+    <a href="about.html">About</a>
+    <a href="educational.html">Educational materials</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact me</a>
+  </nav>
+  <div class="header-actions">
+    <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch theme">
+      <span class="theme-icon">☾</span><span class="theme-label">Dark</span>
+    </button>
+    <button class="search-btn" id="searchToggle">SEARCH</button>
+  </div>
+  <button class="menu-toggle" id="menuToggle" aria-label="Open menu"><span></span><span></span><span></span></button>
+  <nav class="mobile-nav" id="mobileNav">
+    <a href="about.html">About</a>
+    <a href="educational.html">Educational materials</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact me</a>
+  </nav>
+</header>
+<div class="search-panel" id="searchPanel">
+  <form id="searchForm">
+    <input id="searchInput" type="search" placeholder="Search this website..." aria-label="Search this website">
+    <button type="submit">SEARCH</button>
+  </form>
+</div>
+
+
+<main class="contact-page">
+  <section class="contact-form">
+    <h1>Let’s connect.</h1>
+    <form id="contactForm">
+      <div class="field-row">
+        <div class="field"><label>First Name <span>(required)</span></label><input name="firstName" required></div>
+        <div class="field"><label>Last Name <span>(required)</span></label><input name="lastName" required></div>
+      </div>
+      <div class="field"><label>Email <span>(required)</span></label><input type="email" name="email" required></div>
+      <div class="field"><label>Phone</label><input name="phone"></div>
+      <div class="field"><label>Project Details <span>(required)</span></label><textarea name="details" required></textarea></div>
+      <button class="submit-btn" type="submit">SUBMIT</button>
+    </form>
+  </section>
+  <section class="contact-image"><img src="assets/contact-workspace.jpg" alt="Workspace"></section>
+</main>
+
+<footer class="footer-note">© 2026 Shivam Sah · Chemical Engineering</footer>
+<script src="script.js"></script>
+</body>
+</html>
