@@ -1,71 +1,174 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Home | Shivam Sah</title>
-<meta name="description" content="Portfolio website of Shivam Sah, Chemical Engineering student at Pulchowk Campus.">
-<link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#07101d">
+  <meta name="description" content="Shivam Sah — Chemical Engineering student, aspiring process engineer, problem solver, and technology enthusiast from Lalitpur, Nepal.">
+  <meta name="author" content="Shivam Sah">
+  <meta property="og:title" content="Shivam Sah | Chemical Engineering Student">
+  <meta property="og:description" content="Personal portfolio of Shivam Sah, a fourth-year Chemical Engineering student and aspiring process engineer.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="images/profile.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>Shivam Sah | Chemical Engineering Student</title>
+  <link rel="icon" type="image/png" href="images/logo.png">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
-<header class="site-header">
-  <a href="index.html" aria-label="Shivam Sah home"><img class="logo" src="assets/logo.jpg" alt="Shivam Sah logo"></a>
-  <nav class="nav" aria-label="Main navigation">
-    <a href="about.html">About</a>
-    <a href="educational.html">Educational materials</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="contact.html">Contact me</a>
-  </nav>
-  <div class="header-actions">
-    <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch theme">
-      <span class="theme-icon">☾</span><span class="theme-label">Dark</span>
-    </button>
-    <button class="search-btn" id="searchToggle">SEARCH</button>
-  </div>
-  <button class="menu-toggle" id="menuToggle" aria-label="Open menu"><span></span><span></span><span></span></button>
-  <nav class="mobile-nav" id="mobileNav">
-    <a href="about.html">About</a>
-    <a href="educational.html">Educational materials</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="contact.html">Contact me</a>
+<canvas id="dynamic-bg" aria-hidden="true"></canvas>
+<header class="nav-wrap">
+  <nav class="nav container" aria-label="Primary navigation">
+    <a class="brand" href="#home" aria-label="Shivam Sah home"><span class="brand-mark">SS</span><span>Shivam</span></a>
+    <div class="nav-links" id="navLinks">
+      <a class="active" href="#home">Home</a><a href="#about">About</a><a href="#skills">Skills</a>
+      <a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#education">Education</a><a href="#contact">Contact</a>
+    </div>
+    <div class="nav-actions">
+      <button class="icon-btn" id="themeToggle" aria-label="Switch theme">☼</button>
+      <button class="menu-btn" id="menuBtn" aria-label="Open navigation" aria-expanded="false">☰</button>
+    </div>
   </nav>
 </header>
-<div class="search-panel" id="searchPanel">
-  <form id="searchForm">
-    <input id="searchInput" type="search" placeholder="Search this website..." aria-label="Search this website">
-    <button type="submit">SEARCH</button>
-  </form>
-</div>
-
 
 <main>
-<section class="hero">
-  <div class="hero-content">
-    <div class="hero-copy">
-      <p class="welcome">Welcome</p>
-      <h1><span>I’m</span> Shivam Sah</h1>
-      <p class="role">Chemical Engineer</p>
+<section id="home" class="hero">
+  <div class="container hero-grid">
+    <div class="reveal">
+      <h1>I'm <span>Shivam Sah.</span></h1>
+      <div class="hero-title">Chemical Engineering Student <span class="muted">|</span> Future Process Engineer</div>
+      <p class="hero-copy">I'm a fourth-year Chemical Engineering student at Pulchowk Campus, exploring process design, simulation, sustainable energy, and green hydrogen while building practical engineering solutions.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="#projects">View My Projects <span>↗</span></a>
+        <a class="btn btn-secondary" href="#contact">Get In Touch <span>→</span></a>
+      </div>
+      <div class="hero-meta"><span><i></i> Process Engineering</span><span><i></i> Sustainable Technology</span><span><i></i> Problem Solving</span></div>
     </div>
-    <img class="hero-profile" src="assets/hero-profile.jpg" alt="Shivam Sah">
+    <div class="engineering-visual reveal" aria-label="Abstract engineering visualization" role="img">
+      <div class="orbit">
+        <div class="node">H₂</div><div class="node">PFD</div><div class="node">SIM</div><div class="node">CPI</div>
+        <div class="flow one"></div><div class="flow two"></div><div class="flow three"></div><div class="flow four"></div>
+        <div class="core"><strong>SS</strong></div>
+      </div>
+    </div>
   </div>
 </section>
-<section class="home-footer">
-  <div>
-    <h2>Location</h2>
-    <p><strong>Lalitpur, Nepal</strong><br>Institute of Engineering, Pulchowk Campus<br>Tribhuvan University</p>
+
+<section id="about" class="section">
+  <div class="container about-grid">
+    <div class="profile-card reveal">
+      <div class="profile-glow"></div>
+      <div class="profile-frame"><img src="images/profile.jpg" alt="Shivam Sah in formal attire" loading="lazy"></div>
+    </div>
+    <div class="about-copy reveal">
+      <div class="section-head"><div class="eyebrow">About Me</div><h2>Engineering ideas into practical solutions.</h2></div>
+      <p>I'm a fourth-year Chemical Engineering student at Pulchowk Campus, Institute of Engineering, Tribhuvan University, with a strong interest in process engineering, simulation, sustainable energy, and industrial technologies.</p>
+      <p>I enjoy turning engineering concepts into practical solutions, from process modelling and equipment design to exploring emerging technologies such as green hydrogen and alkaline water electrolysis.</p>
+      <p>Beyond engineering, I value leadership, teamwork, communication, and community involvement. I enjoy organizing initiatives, collaborating with people, and taking on challenges that push me to learn something new.</p>
+      <p>My long-term goal is to build a career in process engineering and sustainable technologies, contributing to innovative projects that create practical value for industries and society.</p>
+      <div class="info-strip"><div class="info"><strong>Pulchowk Campus</strong><span>Institute of Engineering</span></div><div class="info"><strong>Fourth Year</strong><span>Chemical Engineering</span></div><div class="info"><strong>Lalitpur</strong><span>Nepal</span></div></div>
+    </div>
   </div>
-  <div>
-    <h2>Contact</h2>
-    <p>079bch041.shivam@pcampus.edu.np<br>+977 9744204250</p>
+</section>
+
+<section id="skills" class="section">
+  <div class="container">
+    <div class="section-head reveal"><div class="eyebrow">Capabilities</div><h2>Skills & technical interests.</h2><p class="lead">A growing toolkit spanning core chemical engineering, process systems, sustainable technologies, and collaborative leadership.</p></div>
+    <div class="skills-grid">
+      <div class="skill reveal"><div class="skill-dot"></div><h3>Chemical Engineering</h3><p>Core engineering fundamentals</p></div>
+      <div class="skill reveal"><div class="skill-dot"></div><h3>Process Design</h3><p>Flowsheets & process thinking</p></div>
+      <div class="skill reveal"><div class="skill-dot"></div><h3>Process Simulation</h3><p>Modelling & simulation</p></div>
+      <div class="skill reveal"><div class="skill-dot"></div><h3>Aspen Plus</h3><p>Process simulation platform</p></div>
+      <div class="skill reveal"><div class="skill-dot"></div><h3>Mass Transfer</h3><p>Separation fundamentals</p></div>
+      <div class="skill reveal"><div class="skill-dot"></div><h3>Heat Transfer</h3><p>Thermal process analysis</p></div>
+      <div class="skill reveal"><div class="skill-dot"></div><h3>Chemical Process Industries</h3><p>Industrial process concepts</p></div>
+      <div class="skill reveal"><div class="skill-dot"></div><h3>Equipment Design</h3><p>Equipment sizing & selection</p></div>
+      <div class="skill reveal"><div class="skill-dot"></div><h3>Process Modelling</h3><p>Engineering models</p></div>
+      <div class="skill reveal"><div class="skill-dot"></div><h3>Sustainable Energy</h3><p>Low-carbon technologies</p></div>
+      <div class="skill reveal"><div class="skill-dot"></div><h3>Green Hydrogen</h3><p>Renewable H₂ systems</p></div>
+      <div class="skill reveal"><div class="skill-dot"></div><h3>Alkaline Water Electrolysis</h3><p>Electrochemical systems</p></div>
+      <div class="skill reveal"><div class="skill-dot"></div><h3>Research & Technical Analysis</h3><p>Structured engineering research</p></div>
+      <div class="skill reveal"><div class="skill-dot"></div><h3>Teamwork & Leadership</h3><p>Collaboration & coordination</p></div>
+    </div>
   </div>
-  <div>
-    <p class="quote">“Freedom from fear is not a byproduct of victory; freedom from fear is the victory itself.”<small>— Acharya Prashant</small></p>
+</section>
+
+<section id="projects" class="section projects">
+  <div class="container">
+    <div class="section-head reveal"><div class="eyebrow">Selected Work</div><h2>Projects with an engineering mindset.</h2><p class="lead">Academic and technical work focused on process understanding, design, simulation, and industrial applications.</p></div>
+    <div class="project-grid">
+      <article class="project-card reveal"><div class="project-media"><img src="images/projects/green-hydrogen.svg" alt="Green hydrogen project placeholder" loading="lazy"></div><div class="project-body"><div class="project-num">01 · SUSTAINABLE ENERGY</div><h3>Green Hydrogen Production Using Alkaline Water Electrolysis</h3><p>Exploring alkaline water electrolysis for green hydrogen production using renewable electricity, with a focus on process simulation and equipment modelling.</p><div class="tags"><span class="tag">Aspen Plus</span><span class="tag">Process Simulation</span><span class="tag">Chemical Engineering</span></div><button class="text-btn" data-project="Green Hydrogen Production Using Alkaline Water Electrolysis">View Project →</button></div></article>
+      <article class="project-card reveal"><div class="project-media"><img src="images/projects/canned-mushroom.svg" alt="Canned mushroom manufacturing project placeholder" loading="lazy"></div><div class="project-body"><div class="project-num">02 · PROCESS DESIGN</div><h3>Canned Mushroom Manufacturing Process</h3><p>Academic process design project focused on the manufacturing process, unit operations, material balance, and industrial considerations involved in canned mushroom production.</p><div class="tags"><span class="tag">Material Balance</span><span class="tag">Unit Operations</span><span class="tag">Process Design</span></div><button class="text-btn" data-project="Canned Mushroom Manufacturing Process">View Project →</button></div></article>
+      <article class="project-card reveal"><div class="project-media"><img src="images/projects/rotary-drum.svg" alt="Rotary drum dryer project placeholder" loading="lazy"></div><div class="project-body"><div class="project-num">03 · EQUIPMENT DESIGN</div><h3>Rotary Drum Dryer</h3><p>Study and design of a rotary drum drying system, including operating principles, heat and mass transfer considerations, and industrial applications.</p><div class="tags"><span class="tag">Heat Transfer</span><span class="tag">Mass Transfer</span><span class="tag">Equipment Design</span></div><button class="text-btn" data-project="Rotary Drum Dryer">View Project →</button></div></article>
+      <article class="project-card reveal"><div class="project-media"><img src="images/projects/vicks-purification.svg" alt="Vicks VapoRub purification project placeholder" loading="lazy"></div><div class="project-body"><div class="project-num">04 · SEPARATION</div><h3>Vicks VapoRub Purification</h3><p>Process study involving purification using short-path distillation and analysis of separation principles.</p><div class="tags"><span class="tag">Separation Processes</span><span class="tag">Distillation</span><span class="tag">Process Analysis</span></div><button class="text-btn" data-project="Vicks VapoRub Purification">View Project →</button></div></article>
+      <article class="project-card reveal"><div class="project-media"><img src="images/projects/shoe-polish.svg" alt="Shoe polish manufacturing project placeholder" loading="lazy"></div><div class="project-body"><div class="project-num">05 · CHEMICAL INDUSTRY</div><h3>Shoe Polish Manufacturing</h3><p>Chemical process industry project covering formulation, manufacturing process, equipment, and industrial production considerations.</p><div class="tags"><span class="tag">CPI</span><span class="tag">Formulation</span><span class="tag">Equipment</span></div><button class="text-btn" data-project="Shoe Polish Manufacturing">View Project →</button></div></article>
+    </div>
+  </div>
+</section>
+
+<section id="experience" class="section">
+  <div class="container">
+    <div class="section-head reveal"><div class="eyebrow">Leadership</div><h2>Experience beyond the classroom.</h2></div>
+    <div class="timeline">
+      <div class="timeline-item reveal"><div class="timeline-dot"></div><div class="timeline-card"><div class="date">Student Leadership</div><h3>Nepal Terai Bidhyarthi Navajagaran Sangh (NTBNS)</h3><h4>President / Student Leadership Role</h4><p>Worked in student leadership, coordinating initiatives, organizing programs, collaborating with students, and contributing to community-oriented activities.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="education" class="section">
+  <div class="container">
+    <div class="section-head reveal"><div class="eyebrow">Education</div><h2>Building a strong engineering foundation.</h2></div>
+    <div class="edu-card reveal">
+      <div><div class="degree">Bachelor's in Chemical Engineering</div><div class="institution">Pulchowk Campus, Institute of Engineering · Tribhuvan University</div><p class="muted">Fourth-year student developing a practical foundation across Chemical Engineering, Process Design, Mass Transfer, Heat Transfer, Chemical Process Industries, and Process Simulation.</p><div class="edu-tags"><span class="tag">Chemical Engineering</span><span class="tag">Process Design</span><span class="tag">Mass Transfer</span><span class="tag">Heat Transfer</span><span class="tag">Chemical Process Industries</span><span class="tag">Process Simulation</span></div></div>
+      <div class="year-badge">Fourth Year</div>
+    </div>
+  </div>
+</section>
+
+<section class="quote-section">
+  <div class="container">
+    <div class="quote-box reveal"><div class="quote-mark">“</div><blockquote>Don’t ask for confidence, ask for fearlessness.</blockquote><cite>— Acharya Prashant</cite></div>
+  </div>
+</section>
+
+<section id="contact" class="section">
+  <div class="container">
+    <div class="section-head reveal"><div class="eyebrow">Contact</div><h2>Let's Connect</h2><p class="lead">I'm always open to learning, collaborating, discussing engineering ideas, and exploring interesting opportunities.</p></div>
+    <div class="contact-grid">
+      <div class="reveal">
+        <div class="contact-list">
+          <!-- Replace placeholder URLs/email with Shivam's real details. -->
+          <a class="contact-item" href="mailto:079bch041.shivam@pcampus.edu.np"><span class="contact-icon">✉</span><span><small>Email</small><strong>079bch041.shivam@pcampus.edu.np</strong></span></a>
+          <a class="contact-item" href="https://www.linkedin.com/in/shivam-sah-376569285/" target="_blank" rel="noopener"><span class="contact-icon">in</span><span><small>LinkedIn</small><strong>linkedin.com/in/shivam-sah-376569285</strong></span></a>
+          <a class="contact-item" href="https://github.com/shivam-sah5434/shivam-sah" target="_blank" rel="noopener"><span class="contact-icon">⌘</span><span><small>GitHub</small><strong>github.com/shivam-sah5434/shivam-sah</strong></span></a>
+          <a class="contact-item" href="https://www.facebook.com/shivam.sah.5464" target="_blank" rel="noopener"><span class="contact-icon">f</span><span><small>Facebook</small><strong>facebook.com/shivam.sah.5464</strong></span></a>
+        </div>
+      </div>
+      <form class="form reveal" id="contactForm">
+        <div class="field"><label for="name">Name</label><input id="name" name="name" required placeholder="Your name"></div>
+        <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" required placeholder="you@example.com"></div>
+        <div class="field"><label for="message">Message</label><textarea id="message" name="message" required placeholder="Tell me what you'd like to discuss..."></textarea></div>
+        <button class="btn btn-primary" type="submit">Send Message <span>→</span></button>
+      </form>
+    </div>
   </div>
 </section>
 </main>
 
-<footer class="footer-note">© 2026 Shivam Sah · Chemical Engineering</footer>
-<script src="script.js"></script>
+<footer>
+  <div class="container footer-row">
+    <div><div class="footer-brand">Shivam Sah</div><div>Chemical Engineering Student | Future Process Engineer</div><div>Lalitpur, Nepal · © <span id="year">2026</span> Shivam Sah. All rights reserved.</div></div>
+    <div class="socials"><a class="social" href="https://www.linkedin.com/in/shivam-sah-376569285/" aria-label="LinkedIn" target="_blank" rel="noopener">in</a><a class="social" href="https://github.com/shivam-sah5434/shivam-sah" aria-label="GitHub" target="_blank" rel="noopener">⌘</a><a class="social" href="https://www.facebook.com/shivam.sah.5464" aria-label="Facebook" target="_blank" rel="noopener">f</a></div>
+  </div>
+</footer>
+
+<button id="topBtn" aria-label="Back to top">↑</button>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<div class="modal" id="projectModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <div class="modal-card"><button class="icon-btn modal-close" id="modalClose" aria-label="Close project details">×</button><div class="eyebrow">Project Details</div><h3 id="modalTitle"></h3><p id="modalDesc"></p><div class="modal-tech" id="modalTech"></div></div>
+</div>
+
+<script src="js/script.js"></script>
 </body>
 </html>

@@ -1,0 +1,536 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#07101d">
+  <meta name="description" content="Shivam Sah — Chemical Engineering student, aspiring process engineer, problem solver, and technology enthusiast from Lalitpur, Nepal.">
+  <meta name="author" content="Shivam Sah">
+  <meta property="og:title" content="Shivam Sah | Chemical Engineering Student">
+  <meta property="og:description" content="Personal portfolio of Shivam Sah, a fourth-year Chemical Engineering student and aspiring process engineer.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="images/profile.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>Shivam Sah | Chemical Engineering Student</title>
+  <link rel="icon" type="image/png" href="images/logo.png">
+  <style>
+/* Shivam Sah Portfolio — edit this file to customize the visual system. */
+:root{
+  --bg:#07101d; --bg-2:#0b1728; --surface:rgba(16,31,52,.72);
+  --surface-solid:#0e1c2e; --text:#eef6ff; --muted:#9eb2c8; --line:rgba(160,190,220,.14);
+  --accent:#4ecbff; --accent-2:#7c8cff; --accent-3:#62e6c7;
+  --shadow:0 24px 70px rgba(0,0,0,.32); --radius:22px; --max:1180px;
+}
+body.light{
+  --bg:#f4f8fc; --bg-2:#eaf1f8; --surface:rgba(255,255,255,.76);
+  --surface-solid:#fff; --text:#0d1b2e; --muted:#5f7185; --line:rgba(20,55,90,.13);
+  --accent:#087fb4; --accent-2:#5365d9; --accent-3:#168f7d;
+  --shadow:0 22px 60px rgba(25,55,90,.13);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:
+radial-gradient(circle at 85% 10%,rgba(78,203,255,.12),transparent 25%),
+radial-gradient(circle at 5% 30%,rgba(124,140,255,.09),transparent 24%),var(--bg);
+color:var(--text);line-height:1.65;transition:background .3s,color .3s}
+#dynamic-bg{position:fixed;inset:0;width:100%;height:100%;z-index:-3;pointer-events:none;opacity:.9}
+body:after{content:"";position:fixed;inset:-15%;z-index:-2;pointer-events:none;
+background:radial-gradient(circle at var(--mx,50%) var(--my,50%),rgba(78,203,255,.10),transparent 18%),
+radial-gradient(circle at calc(100% - var(--mx,50%)) calc(100% - var(--my,50%)),rgba(124,140,255,.08),transparent 22%);
+transition:background-position .18s ease;mix-blend-mode:screen}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.035;background-image:linear-gradient(rgba(255,255,255,.8) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.8) 1px,transparent 1px);background-size:60px 60px;mask-image:linear-gradient(to bottom,black,transparent 75%)}
+a{color:inherit;text-decoration:none}
+button,input,textarea{font:inherit}
+button{cursor:pointer}
+img{max-width:100%;display:block}
+.container{width:min(calc(100% - 40px),var(--max));margin:auto}
+.section{padding:105px 0;position:relative}
+.section-head{max-width:700px;margin-bottom:48px}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;color:var(--accent);font-size:.78rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase}
+.eyebrow:before{content:"";width:24px;height:1px;background:currentColor}
+h1,h2,h3{line-height:1.12;margin:0}
+h2{font-size:clamp(2rem,4vw,3.2rem);letter-spacing:-.035em}
+.lead{color:var(--muted);font-size:1.05rem}
+.muted{color:var(--muted)}
+.highlight{color:var(--accent)}
+header.nav-wrap{position:fixed;z-index:50;top:0;left:0;right:0;padding:14px 0}
+.nav{height:64px;display:flex;align-items:center;justify-content:space-between;border:1px solid var(--line);background:color-mix(in srgb,var(--surface-solid) 70%,transparent);backdrop-filter:blur(18px);border-radius:18px;padding:0 14px 0 18px;box-shadow:0 10px 35px rgba(0,0,0,.08)}
+.brand{display:flex;align-items:center;gap:10px;font-weight:850;letter-spacing:-.03em}
+.brand-mark{width:34px;height:34px;border-radius:10px;display:grid;place-items:center;background:linear-gradient(135deg,var(--accent),var(--accent-2));color:#06111e;font-weight:950;font-size:.78rem;box-shadow:0 8px 22px rgba(78,203,255,.2)}
+.nav-links{display:flex;align-items:center;gap:4px}
+.nav-links a{position:relative;padding:9px 12px;color:var(--muted);font-size:.88rem;font-weight:650;border-radius:10px}
+.nav-links a:hover,.nav-links a.active{color:var(--text);background:rgba(128,160,195,.08)}
+.nav-links a.active:after{content:"";position:absolute;left:12px;right:12px;bottom:3px;height:2px;background:var(--accent);border-radius:2px}
+.nav-actions{display:flex;align-items:center;gap:7px}
+.icon-btn,.menu-btn{width:40px;height:40px;border:1px solid var(--line);background:transparent;color:var(--text);border-radius:11px;display:grid;place-items:center}
+.menu-btn{display:none}
+.hero{min-height:100vh;display:grid;align-items:center;padding-top:115px;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:center}
+.hero h1{font-size:clamp(3.4rem,7vw,6.5rem);letter-spacing:-.065em;margin:14px 0 22px}
+.hero h1 span{background:linear-gradient(100deg,var(--text),var(--accent));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero-title{font-size:clamp(1.3rem,2.3vw,2rem);font-weight:760;letter-spacing:-.03em;margin-bottom:18px}
+.hero-copy{max-width:690px;color:var(--muted);font-size:1.08rem}
+.cta-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;border:1px solid var(--line);padding:12px 18px;border-radius:12px;font-weight:800;font-size:.92rem;transition:transform .2s,box-shadow .2s,background .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn-primary{background:linear-gradient(135deg,var(--accent),#76a5ff);color:#06111e;border-color:transparent;box-shadow:0 12px 30px rgba(78,203,255,.18)}
+.btn-secondary{background:var(--surface);backdrop-filter:blur(10px)}
+.hero-meta{display:flex;gap:22px;flex-wrap:wrap;margin-top:28px;color:var(--muted);font-size:.87rem}
+.hero-meta span{display:inline-flex;align-items:center;gap:7px}
+.hero-meta i{width:7px;height:7px;background:var(--accent-3);border-radius:50%;box-shadow:0 0 0 5px rgba(98,230,199,.09)}
+.engineering-visual{min-height:510px;position:relative;display:grid;place-items:center}
+.orbit{width:min(470px,88vw);aspect-ratio:1;border:1px solid rgba(78,203,255,.18);border-radius:50%;position:relative;animation:float 7s ease-in-out infinite}
+.orbit:before,.orbit:after{content:"";position:absolute;inset:12%;border:1px solid rgba(124,140,255,.18);border-radius:50%;transform:rotate(58deg)}
+.orbit:after{inset:26%;transform:rotate(-30deg)}
+.core{width:130px;height:130px;border-radius:36px;display:grid;place-items:center;background:linear-gradient(145deg,rgba(78,203,255,.16),rgba(124,140,255,.12));border:1px solid rgba(130,190,240,.25);box-shadow:0 0 80px rgba(78,203,255,.12);position:absolute;inset:0;margin:auto;backdrop-filter:blur(12px)}
+.core strong{font-size:2rem;letter-spacing:-.06em}
+.node{position:absolute;width:58px;height:58px;border-radius:18px;display:grid;place-items:center;background:var(--surface);border:1px solid var(--line);box-shadow:var(--shadow);font-weight:850;color:var(--accent)}
+.node:nth-child(2){top:8%;left:19%}.node:nth-child(3){top:16%;right:9%}.node:nth-child(4){bottom:13%;right:17%}.node:nth-child(5){bottom:9%;left:13%}
+.flow{position:absolute;width:180px;height:1px;background:linear-gradient(90deg,transparent,var(--accent),transparent);transform-origin:left;opacity:.55}
+.flow.one{top:31%;left:28%;transform:rotate(25deg)}.flow.two{top:33%;right:22%;transform:rotate(154deg)}.flow.three{bottom:28%;right:29%;transform:rotate(204deg)}.flow.four{bottom:26%;left:26%;transform:rotate(337deg)}
+.about-grid{display:grid;grid-template-columns:.72fr 1.28fr;gap:55px;align-items:center}
+.profile-card{position:relative;max-width:390px}
+.profile-frame{aspect-ratio:4/5;border-radius:30px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow);background:var(--surface-solid)}
+.profile-frame img{width:100%;height:100%;object-fit:cover;object-position:center 22%;filter:saturate(.92)}
+.profile-glow{position:absolute;width:170px;height:170px;background:var(--accent);filter:blur(70px);opacity:.18;left:-40px;bottom:-30px;z-index:-1}
+.about-copy p{color:var(--muted);margin:0 0 18px}
+.info-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:28px}
+.info{padding:17px;border:1px solid var(--line);border-radius:15px;background:var(--surface)}
+.info strong{display:block;font-size:.96rem}.info span{display:block;color:var(--muted);font-size:.8rem;margin-top:4px}
+.skills-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.skill{padding:18px;border:1px solid var(--line);background:var(--surface);border-radius:16px;transition:transform .2s,border-color .2s}
+.skill:hover{transform:translateY(-4px);border-color:rgba(78,203,255,.35)}
+.skill-dot{width:9px;height:9px;border-radius:50%;background:linear-gradient(135deg,var(--accent),var(--accent-2));margin-bottom:14px}
+.skill h3{font-size:.94rem}.skill p{font-size:.78rem;color:var(--muted);margin:5px 0 0}
+.projects{background:linear-gradient(180deg,transparent,rgba(78,203,255,.025),transparent)}
+.project-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.project-card{overflow:hidden;border:1px solid var(--line);background:var(--surface);border-radius:22px;transition:transform .25s,box-shadow .25s,border-color .25s}
+.project-card:hover{transform:translateY(-7px);box-shadow:var(--shadow);border-color:rgba(78,203,255,.3)}
+.project-media{aspect-ratio:16/9;overflow:hidden;background:var(--bg-2)}
+.project-media img{width:100%;height:100%;object-fit:cover;transition:transform .45s}
+.project-card:hover .project-media img{transform:scale(1.035)}
+.project-body{padding:24px}
+.project-num{font-size:.74rem;color:var(--accent);font-weight:850;letter-spacing:.14em}
+.project-body h3{font-size:1.3rem;margin:8px 0 10px}
+.project-body p{color:var(--muted);font-size:.91rem;margin:0 0 17px}
+.tags{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:20px}
+.tag{font-size:.72rem;padding:5px 9px;border-radius:999px;border:1px solid var(--line);color:var(--muted);background:rgba(120,160,200,.05)}
+.text-btn{color:var(--accent);font-weight:800;font-size:.84rem;display:inline-flex;gap:7px;align-items:center}
+.timeline{position:relative;max-width:880px;margin:0 auto}
+.timeline:before{content:"";position:absolute;left:13px;top:5px;bottom:5px;width:1px;background:var(--line)}
+.timeline-item{position:relative;padding-left:50px;padding-bottom:42px}
+.timeline-dot{position:absolute;left:7px;top:5px;width:14px;height:14px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 7px rgba(78,203,255,.09)}
+.timeline-card{padding:26px;border:1px solid var(--line);border-radius:20px;background:var(--surface)}
+.timeline-card .date{color:var(--accent);font-size:.76rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase}
+.timeline-card h3{font-size:1.25rem;margin:7px 0 2px}.timeline-card h4{margin:0;color:var(--muted);font-weight:650}.timeline-card p{color:var(--muted);margin:13px 0 0}
+.edu-card{display:grid;grid-template-columns:1fr auto;gap:30px;padding:32px;border:1px solid var(--line);border-radius:24px;background:var(--surface);box-shadow:var(--shadow)}
+.degree{font-size:1.55rem;font-weight:850;letter-spacing:-.03em}.institution{margin:7px 0;color:var(--muted)}
+.year-badge{align-self:start;padding:8px 12px;border-radius:999px;background:rgba(78,203,255,.09);border:1px solid rgba(78,203,255,.2);color:var(--accent);font-size:.78rem;font-weight:800}
+.edu-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.quote-section{padding:95px 0}
+.quote-box{position:relative;overflow:hidden;text-align:center;padding:75px 30px;border:1px solid var(--line);border-radius:30px;background:linear-gradient(135deg,rgba(78,203,255,.08),rgba(124,140,255,.06));box-shadow:var(--shadow)}
+.quote-mark{font-size:4.5rem;line-height:.7;color:var(--accent);opacity:.65}.quote-box blockquote{max-width:850px;margin:16px auto 18px;font-size:clamp(1.7rem,4vw,3.1rem);line-height:1.15;letter-spacing:-.045em;font-weight:750}.quote-box cite{color:var(--muted);font-style:normal}
+.contact-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:45px}
+.contact-list{display:grid;gap:10px;margin-top:28px}
+.contact-item{display:flex;align-items:center;gap:13px;padding:14px;border:1px solid var(--line);border-radius:15px;background:var(--surface)}
+.contact-icon{width:38px;height:38px;border-radius:11px;display:grid;place-items:center;background:rgba(78,203,255,.08);color:var(--accent)}
+.contact-item small{display:block;color:var(--muted);font-size:.72rem}.contact-item strong{font-size:.88rem}
+.form{padding:28px;border:1px solid var(--line);background:var(--surface);border-radius:24px}
+.field{display:grid;gap:7px;margin-bottom:15px}.field label{font-size:.78rem;font-weight:750;color:var(--muted)}
+.field input,.field textarea{width:100%;border:1px solid var(--line);outline:none;background:rgba(0,0,0,.08);color:var(--text);border-radius:12px;padding:12px 13px;transition:border-color .2s,box-shadow .2s}
+.field textarea{min-height:145px;resize:vertical}
+.field input:focus,.field textarea:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(78,203,255,.08)}
+footer{border-top:1px solid var(--line);padding:35px 0}
+.footer-row{display:flex;justify-content:space-between;align-items:center;gap:20px;color:var(--muted);font-size:.8rem}
+.footer-brand{color:var(--text);font-weight:850}.socials{display:flex;gap:7px}.social{width:38px;height:38px;border:1px solid var(--line);border-radius:10px;display:grid;place-items:center;transition:transform .2s,border-color .2s;color:var(--muted)}.social:hover{transform:translateY(-2px);color:var(--text);border-color:var(--accent)}
+.reveal{opacity:0;transform:translateY(20px);transition:opacity .7s ease,transform .7s ease}.reveal.visible{opacity:1;transform:none}
+#topBtn{position:fixed;right:22px;bottom:22px;width:44px;height:44px;border:1px solid var(--line);border-radius:13px;background:var(--surface-solid);color:var(--text);display:grid;place-items:center;z-index:40;opacity:0;visibility:hidden;transform:translateY(10px);transition:.25s;box-shadow:var(--shadow)}
+#topBtn.show{opacity:1;visibility:visible;transform:none}
+.toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,20px);opacity:0;pointer-events:none;background:var(--surface-solid);border:1px solid var(--line);padding:11px 15px;border-radius:12px;box-shadow:var(--shadow);font-size:.84rem;z-index:100;transition:.25s}.toast.show{opacity:1;transform:translate(-50%,0)}
+.modal{position:fixed;inset:0;background:rgba(2,8,16,.7);backdrop-filter:blur(10px);z-index:90;display:none;place-items:center;padding:20px}.modal.open{display:grid}.modal-card{width:min(680px,100%);background:var(--surface-solid);border:1px solid var(--line);border-radius:24px;box-shadow:var(--shadow);padding:28px;position:relative}.modal-close{position:absolute;right:18px;top:18px}.modal-card h3{font-size:1.7rem;margin-bottom:10px}.modal-card p{color:var(--muted)}.modal-tech{display:flex;flex-wrap:wrap;gap:8px;margin:20px 0}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+@media(max-width:980px){.hero-grid,.about-grid,.contact-grid{grid-template-columns:1fr}.hero{padding-top:135px}.engineering-visual{min-height:410px;order:-1}.skills-grid{grid-template-columns:repeat(3,1fr)}.project-grid{grid-template-columns:1fr}.nav-links{position:absolute;top:74px;left:0;right:0;padding:9px;background:var(--surface-solid);border:1px solid var(--line);border-radius:16px;display:none;flex-direction:column;align-items:stretch;box-shadow:var(--shadow)}.nav-links.open{display:flex}.nav-links a{padding:12px 14px}.menu-btn{display:grid}}
+@media(max-width:650px){.container{width:min(calc(100% - 28px),var(--max))}.section{padding:80px 0}.hero h1{font-size:3.25rem}.hero-title{font-size:1.25rem}.engineering-visual{min-height:340px}.orbit{width:330px}.node{width:48px;height:48px;border-radius:15px;font-size:.78rem}.core{width:100px;height:100px;border-radius:28px}.skills-grid{grid-template-columns:repeat(2,1fr)}.info-strip{grid-template-columns:1fr}.edu-card{grid-template-columns:1fr}.footer-row{flex-direction:column;align-items:flex-start}.footer-row .socials{order:-1}.profile-card{max-width:100%}.about-grid{gap:30px}.project-body{padding:20px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important}}
+
+.hero .container{transform:translate3d(var(--hero-x,0px),var(--hero-y,0px),0);transition:transform .18s ease-out}
+@media(max-width:650px){.hero .container{transform:none}}
+</style>
+</head>
+<body>
+<canvas id="dynamic-bg" aria-hidden="true"></canvas>
+<header class="nav-wrap">
+  <nav class="nav container" aria-label="Primary navigation">
+    <a class="brand" href="#home" aria-label="Shivam Sah home"><span class="brand-mark">SS</span><span>Shivam</span></a>
+    <div class="nav-links" id="navLinks">
+      <a class="active" href="#home">Home</a><a href="#about">About</a><a href="#skills">Skills</a>
+      <a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#education">Education</a><a href="#contact">Contact</a>
+    </div>
+    <div class="nav-actions">
+      <button class="icon-btn" id="themeToggle" aria-label="Switch theme">☼</button>
+      <button class="menu-btn" id="menuBtn" aria-label="Open navigation" aria-expanded="false">☰</button>
+    </div>
+  </nav>
+</header>
+
+<main>
+<section id="home" class="hero">
+  <div class="container hero-grid">
+    <div class="reveal">
+      <h1>I'm <span>Shivam Sah.</span></h1>
+      <div class="hero-title">Chemical Engineering Student <span class="muted">|</span> Future Process Engineer</div>
+      <p class="hero-copy">I'm a fourth-year Chemical Engineering student at Pulchowk Campus, exploring process design, simulation, sustainable energy, and green hydrogen while building practical engineering solutions.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="#projects">View My Projects <span>↗</span></a>
+        <a class="btn btn-secondary" href="#contact">Get In Touch <span>→</span></a>
+      </div>
+      <div class="hero-meta"><span><i></i> Process Engineering</span><span><i></i> Sustainable Technology</span><span><i></i> Problem Solving</span></div>
+    </div>
+    <div class="engineering-visual reveal" aria-label="Abstract engineering visualization" role="img">
+      <div class="orbit">
+        <div class="node">H₂</div><div class="node">PFD</div><div class="node">SIM</div><div class="node">CPI</div>
+        <div class="flow one"></div><div class="flow two"></div><div class="flow three"></div><div class="flow four"></div>
+        <div class="core"><strong>SS</strong></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="section">
+  <div class="container about-grid">
+    <div class="profile-card reveal">
+      <div class="profile-glow"></div>
+      <div class="profile-frame"><img src="images/profile.jpg" alt="Shivam Sah in formal attire" loading="lazy"></div>
+    </div>
+    <div class="about-copy reveal">
+      <div class="section-head"><div class="eyebrow">About Me</div><h2>Engineering ideas into practical solutions.</h2></div>
+      <p>I'm a fourth-year Chemical Engineering student at Pulchowk Campus, Institute of Engineering, Tribhuvan University, with a strong interest in process engineering, simulation, sustainable energy, and industrial technologies.</p>
+      <p>I enjoy turning engineering concepts into practical solutions, from process modelling and equipment design to exploring emerging technologies such as green hydrogen and alkaline water electrolysis.</p>
+      <p>Beyond engineering, I value leadership, teamwork, communication, and community involvement. I enjoy organizing initiatives, collaborating with people, and taking on challenges that push me to learn something new.</p>
+      <p>My long-term goal is to build a career in process engineering and sustainable technologies, contributing to innovative projects that create practical value for industries and society.</p>
+      <div class="info-strip"><div class="info"><strong>Pulchowk Campus</strong><span>Institute of Engineering</span></div><div class="info"><strong>Fourth Year</strong><span>Chemical Engineering</span></div><div class="info"><strong>Lalitpur</strong><span>Nepal</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="skills" class="section">
+  <div class="container">
+    <div class="section-head reveal"><div class="eyebrow">Capabilities</div><h2>Skills & technical interests.</h2><p class="lead">A growing toolkit spanning core chemical engineering, process systems, sustainable technologies, and collaborative leadership.</p></div>
+    <div class="skills-grid">
+      <div class="skill reveal"><div class="skill-dot"></div><h3>Chemical Engineering</h3><p>Core engineering fundamentals</p></div>
+      <div class="skill reveal"><div class="skill-dot"></div><h3>Process Design</h3><p>Flowsheets & process thinking</p></div>
+      <div class="skill reveal"><div class="skill-dot"></div><h3>Process Simulation</h3><p>Modelling & simulation</p></div>
+      <div class="skill reveal"><div class="skill-dot"></div><h3>Aspen Plus</h3><p>Process simulation platform</p></div>
+      <div class="skill reveal"><div class="skill-dot"></div><h3>Mass Transfer</h3><p>Separation fundamentals</p></div>
+      <div class="skill reveal"><div class="skill-dot"></div><h3>Heat Transfer</h3><p>Thermal process analysis</p></div>
+      <div class="skill reveal"><div class="skill-dot"></div><h3>Chemical Process Industries</h3><p>Industrial process concepts</p></div>
+      <div class="skill reveal"><div class="skill-dot"></div><h3>Equipment Design</h3><p>Equipment sizing & selection</p></div>
+      <div class="skill reveal"><div class="skill-dot"></div><h3>Process Modelling</h3><p>Engineering models</p></div>
+      <div class="skill reveal"><div class="skill-dot"></div><h3>Sustainable Energy</h3><p>Low-carbon technologies</p></div>
+      <div class="skill reveal"><div class="skill-dot"></div><h3>Green Hydrogen</h3><p>Renewable H₂ systems</p></div>
+      <div class="skill reveal"><div class="skill-dot"></div><h3>Alkaline Water Electrolysis</h3><p>Electrochemical systems</p></div>
+      <div class="skill reveal"><div class="skill-dot"></div><h3>Research & Technical Analysis</h3><p>Structured engineering research</p></div>
+      <div class="skill reveal"><div class="skill-dot"></div><h3>Teamwork & Leadership</h3><p>Collaboration & coordination</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="projects" class="section projects">
+  <div class="container">
+    <div class="section-head reveal"><div class="eyebrow">Selected Work</div><h2>Projects with an engineering mindset.</h2><p class="lead">Academic and technical work focused on process understanding, design, simulation, and industrial applications.</p></div>
+    <div class="project-grid">
+      <article class="project-card reveal"><div class="project-media"><img src="images/projects/green-hydrogen.svg" alt="Green hydrogen project placeholder" loading="lazy"></div><div class="project-body"><div class="project-num">01 · SUSTAINABLE ENERGY</div><h3>Green Hydrogen Production Using Alkaline Water Electrolysis</h3><p>Exploring alkaline water electrolysis for green hydrogen production using renewable electricity, with a focus on process simulation and equipment modelling.</p><div class="tags"><span class="tag">Aspen Plus</span><span class="tag">Process Simulation</span><span class="tag">Chemical Engineering</span></div><button class="text-btn" data-project="Green Hydrogen Production Using Alkaline Water Electrolysis">View Project →</button></div></article>
+      <article class="project-card reveal"><div class="project-media"><img src="images/projects/canned-mushroom.svg" alt="Canned mushroom manufacturing project placeholder" loading="lazy"></div><div class="project-body"><div class="project-num">02 · PROCESS DESIGN</div><h3>Canned Mushroom Manufacturing Process</h3><p>Academic process design project focused on the manufacturing process, unit operations, material balance, and industrial considerations involved in canned mushroom production.</p><div class="tags"><span class="tag">Material Balance</span><span class="tag">Unit Operations</span><span class="tag">Process Design</span></div><button class="text-btn" data-project="Canned Mushroom Manufacturing Process">View Project →</button></div></article>
+      <article class="project-card reveal"><div class="project-media"><img src="images/projects/rotary-drum.svg" alt="Rotary drum dryer project placeholder" loading="lazy"></div><div class="project-body"><div class="project-num">03 · EQUIPMENT DESIGN</div><h3>Rotary Drum Dryer</h3><p>Study and design of a rotary drum drying system, including operating principles, heat and mass transfer considerations, and industrial applications.</p><div class="tags"><span class="tag">Heat Transfer</span><span class="tag">Mass Transfer</span><span class="tag">Equipment Design</span></div><button class="text-btn" data-project="Rotary Drum Dryer">View Project →</button></div></article>
+      <article class="project-card reveal"><div class="project-media"><img src="images/projects/vicks-purification.svg" alt="Vicks VapoRub purification project placeholder" loading="lazy"></div><div class="project-body"><div class="project-num">04 · SEPARATION</div><h3>Vicks VapoRub Purification</h3><p>Process study involving purification using short-path distillation and analysis of separation principles.</p><div class="tags"><span class="tag">Separation Processes</span><span class="tag">Distillation</span><span class="tag">Process Analysis</span></div><button class="text-btn" data-project="Vicks VapoRub Purification">View Project →</button></div></article>
+      <article class="project-card reveal"><div class="project-media"><img src="images/projects/shoe-polish.svg" alt="Shoe polish manufacturing project placeholder" loading="lazy"></div><div class="project-body"><div class="project-num">05 · CHEMICAL INDUSTRY</div><h3>Shoe Polish Manufacturing</h3><p>Chemical process industry project covering formulation, manufacturing process, equipment, and industrial production considerations.</p><div class="tags"><span class="tag">CPI</span><span class="tag">Formulation</span><span class="tag">Equipment</span></div><button class="text-btn" data-project="Shoe Polish Manufacturing">View Project →</button></div></article>
+    </div>
+  </div>
+</section>
+
+<section id="experience" class="section">
+  <div class="container">
+    <div class="section-head reveal"><div class="eyebrow">Leadership</div><h2>Experience beyond the classroom.</h2></div>
+    <div class="timeline">
+      <div class="timeline-item reveal"><div class="timeline-dot"></div><div class="timeline-card"><div class="date">Student Leadership</div><h3>Nepal Terai Bidhyarthi Navajagaran Sangh (NTBNS)</h3><h4>President / Student Leadership Role</h4><p>Worked in student leadership, coordinating initiatives, organizing programs, collaborating with students, and contributing to community-oriented activities.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="education" class="section">
+  <div class="container">
+    <div class="section-head reveal"><div class="eyebrow">Education</div><h2>Building a strong engineering foundation.</h2></div>
+    <div class="edu-card reveal">
+      <div><div class="degree">Bachelor's in Chemical Engineering</div><div class="institution">Pulchowk Campus, Institute of Engineering · Tribhuvan University</div><p class="muted">Fourth-year student developing a practical foundation across Chemical Engineering, Process Design, Mass Transfer, Heat Transfer, Chemical Process Industries, and Process Simulation.</p><div class="edu-tags"><span class="tag">Chemical Engineering</span><span class="tag">Process Design</span><span class="tag">Mass Transfer</span><span class="tag">Heat Transfer</span><span class="tag">Chemical Process Industries</span><span class="tag">Process Simulation</span></div></div>
+      <div class="year-badge">Fourth Year</div>
+    </div>
+  </div>
+</section>
+
+<section class="quote-section">
+  <div class="container">
+    <div class="quote-box reveal"><div class="quote-mark">“</div><blockquote>Don’t ask for confidence, ask for fearlessness.</blockquote><cite>— Acharya Prashant</cite></div>
+  </div>
+</section>
+
+<section id="contact" class="section">
+  <div class="container">
+    <div class="section-head reveal"><div class="eyebrow">Contact</div><h2>Let's Connect</h2><p class="lead">I'm always open to learning, collaborating, discussing engineering ideas, and exploring interesting opportunities.</p></div>
+    <div class="contact-grid">
+      <div class="reveal">
+        <div class="contact-list">
+          <!-- Replace placeholder URLs/email with Shivam's real details. -->
+          <a class="contact-item" href="mailto:079bch041.shivam@pcampus.edu.np"><span class="contact-icon">✉</span><span><small>Email</small><strong>079bch041.shivam@pcampus.edu.np</strong></span></a>
+          <a class="contact-item" href="https://www.linkedin.com/in/shivam-sah-376569285/" target="_blank" rel="noopener"><span class="contact-icon">in</span><span><small>LinkedIn</small><strong>linkedin.com/in/shivam-sah-376569285</strong></span></a>
+          <a class="contact-item" href="https://github.com/shivam-sah5434/shivam-sah" target="_blank" rel="noopener"><span class="contact-icon">⌘</span><span><small>GitHub</small><strong>github.com/shivam-sah5434/shivam-sah</strong></span></a>
+          <a class="contact-item" href="https://www.facebook.com/shivam.sah.5464" target="_blank" rel="noopener"><span class="contact-icon">f</span><span><small>Facebook</small><strong>facebook.com/shivam.sah.5464</strong></span></a>
+        </div>
+      </div>
+      <form class="form reveal" id="contactForm">
+        <div class="field"><label for="name">Name</label><input id="name" name="name" required placeholder="Your name"></div>
+        <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" required placeholder="you@example.com"></div>
+        <div class="field"><label for="message">Message</label><textarea id="message" name="message" required placeholder="Tell me what you'd like to discuss..."></textarea></div>
+        <button class="btn btn-primary" type="submit">Send Message <span>→</span></button>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container footer-row">
+    <div><div class="footer-brand">Shivam Sah</div><div>Chemical Engineering Student | Future Process Engineer</div><div>Lalitpur, Nepal · © <span id="year">2026</span> Shivam Sah. All rights reserved.</div></div>
+    <div class="socials"><a class="social" href="https://www.linkedin.com/in/shivam-sah-376569285/" aria-label="LinkedIn" target="_blank" rel="noopener">in</a><a class="social" href="https://github.com/shivam-sah5434/shivam-sah" aria-label="GitHub" target="_blank" rel="noopener">⌘</a><a class="social" href="https://www.facebook.com/shivam.sah.5464" aria-label="Facebook" target="_blank" rel="noopener">f</a></div>
+  </div>
+</footer>
+
+<button id="topBtn" aria-label="Back to top">↑</button>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<div class="modal" id="projectModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <div class="modal-card"><button class="icon-btn modal-close" id="modalClose" aria-label="Close project details">×</button><div class="eyebrow">Project Details</div><h3 id="modalTitle"></h3><p id="modalDesc"></p><div class="modal-tech" id="modalTech"></div></div>
+</div>
+
+<script>
+/* Dynamic background: lightweight particles + touch/mouse parallax. */
+(() => {
+  const canvas = document.getElementById('dynamic-bg');
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d', { alpha: true });
+  let w = 0, h = 0, dpr = Math.min(window.devicePixelRatio || 1, 2);
+  let particles = [];
+  const pointer = { x: innerWidth / 2, y: innerHeight / 2, active: false, tx: innerWidth / 2, ty: innerHeight / 2 };
+  const reduced = matchMedia('(prefers-reduced-motion: reduce)');
+
+  function resize(){
+    w = innerWidth; h = innerHeight; dpr = Math.min(devicePixelRatio || 1, 2);
+    canvas.width = Math.floor(w*dpr); canvas.height = Math.floor(h*dpr);
+    canvas.style.width = w+'px'; canvas.style.height = h+'px';
+    ctx.setTransform(dpr,0,0,dpr,0,0);
+    const count = Math.min(95, Math.max(38, Math.floor((w*h)/17000)));
+    particles = Array.from({length:count}, () => ({
+      x: Math.random()*w, y: Math.random()*h,
+      vx:(Math.random()-.5)*.24, vy:(Math.random()-.5)*.24,
+      r:Math.random()*1.7+.45, phase:Math.random()*Math.PI*2
+    }));
+  }
+  resize();
+  addEventListener('resize', resize, {passive:true});
+
+  function move(x,y){
+    pointer.tx=x; pointer.ty=y; pointer.active=true;
+    document.documentElement.style.setProperty('--mx', `${(x/w)*100}%`);
+    document.documentElement.style.setProperty('--my', `${(y/h)*100}%`);
+    const dx=(x-w/2)/w, dy=(y-h/2)/h;
+    document.documentElement.style.setProperty('--hero-x', `${dx*10}px`);
+    document.documentElement.style.setProperty('--hero-y', `${dy*7}px`);
+  }
+  addEventListener('pointermove', e => move(e.clientX,e.clientY), {passive:true});
+  addEventListener('touchmove', e => {
+    const t=e.touches[0]; if(t) move(t.clientX,t.clientY);
+  }, {passive:true});
+  addEventListener('pointerleave', () => pointer.active=false, {passive:true});
+
+  function draw(t){
+    ctx.clearRect(0,0,w,h);
+    if(reduced.matches){ requestAnimationFrame(draw); return; }
+    pointer.x += (pointer.tx-pointer.x)*.055; pointer.y += (pointer.ty-pointer.y)*.055;
+    const light = body.classList.contains('light');
+    const dot = light ? 'rgba(8,127,180,.25)' : 'rgba(78,203,255,.34)';
+    const line = light ? 'rgba(8,127,180,.045)' : 'rgba(78,203,255,.065)';
+
+    for(const p of particles){
+      p.x += p.vx; p.y += p.vy;
+      if(p.x < -20) p.x=w+20; if(p.x>w+20) p.x=-20;
+      if(p.y < -20) p.y=h+20; if(p.y>h+20) p.y=-20;
+
+      const dx=p.x-pointer.x, dy=p.y-pointer.y, dist=Math.hypot(dx,dy);
+      if(pointer.active && dist<170){
+        const force=(170-dist)/170*.012;
+        p.x += dx*force; p.y += dy*force;
+      }
+      const pulse=.72+.28*Math.sin(t*.001+p.phase);
+      ctx.beginPath(); ctx.arc(p.x,p.y,p.r*pulse,0,Math.PI*2);
+      ctx.fillStyle=dot; ctx.fill();
+    }
+
+    // Connect only nearby particles, keeping the effect subtle.
+    for(let i=0;i<particles.length;i++){
+      for(let j=i+1;j<particles.length;j++){
+        const a=particles[i], b=particles[j], dx=a.x-b.x, dy=a.y-b.y, dist2=dx*dx+dy*dy;
+        if(dist2<10500){
+          const alpha=(1-Math.sqrt(dist2)/102.5)*.7;
+          ctx.strokeStyle=line.replace(/[\d.]+\)$/,'') + alpha + ')';
+          ctx.lineWidth=.55;
+          ctx.beginPath(); ctx.moveTo(a.x,a.y); ctx.lineTo(b.x,b.y); ctx.stroke();
+        }
+      }
+    }
+
+    // Soft cursor/touch halo.
+    if(pointer.active){
+      const g=ctx.createRadialGradient(pointer.x,pointer.y,0,pointer.x,pointer.y,150);
+      g.addColorStop(0, light?'rgba(8,127,180,.075)':'rgba(78,203,255,.09)');
+      g.addColorStop(1,'rgba(78,203,255,0)');
+      ctx.fillStyle=g; ctx.beginPath(); ctx.arc(pointer.x,pointer.y,150,0,Math.PI*2); ctx.fill();
+    }
+    requestAnimationFrame(draw);
+  }
+  requestAnimationFrame(draw);
+})();
+
+
+const body = document.body;
+const themeToggle = document.querySelector('#themeToggle');
+const menuBtn = document.querySelector('#menuBtn');
+const navLinks = document.querySelector('#navLinks');
+const topBtn = document.querySelector('#topBtn');
+const toast = document.querySelector('#toast');
+const sections = [...document.querySelectorAll('main section[id]')];
+const navAnchors = [...document.querySelectorAll('.nav-links a')];
+
+function setTheme(theme){
+  body.classList.toggle('light', theme === 'light');
+  localStorage.setItem('shivam-theme', theme);
+  themeToggle.setAttribute('aria-label', theme === 'light' ? 'Switch to dark mode' : 'Switch to light mode');
+  themeToggle.innerHTML = theme === 'light' ? '☾' : '☼';
+}
+const savedTheme = localStorage.getItem('shivam-theme');
+setTheme(savedTheme || (matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark'));
+
+themeToggle.addEventListener('click', () => setTheme(body.classList.contains('light') ? 'dark' : 'light'));
+
+menuBtn.addEventListener('click', () => {
+  const open = navLinks.classList.toggle('open');
+  menuBtn.setAttribute('aria-expanded', open);
+  menuBtn.textContent = open ? '×' : '☰';
+});
+navAnchors.forEach(a => a.addEventListener('click', () => {
+  navLinks.classList.remove('open');
+  menuBtn.setAttribute('aria-expanded', 'false');
+  menuBtn.textContent = '☰';
+}));
+
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){ entry.target.classList.add('visible'); revealObserver.unobserve(entry.target); }
+  });
+},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+const sectionObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      navAnchors.forEach(a => a.classList.toggle('active', a.getAttribute('href') === `#${entry.target.id}`));
+    }
+  });
+},{rootMargin:'-35% 0px -55% 0px'});
+sections.forEach(section => sectionObserver.observe(section));
+
+window.addEventListener('scroll', () => topBtn.classList.toggle('show', scrollY > 650), {passive:true});
+topBtn.addEventListener('click', () => scrollTo({top:0, behavior:'smooth'}));
+
+function showToast(message){
+  toast.textContent = message;
+  toast.classList.add('show');
+  clearTimeout(showToast.timer);
+  showToast.timer = setTimeout(() => toast.classList.remove('show'), 3000);
+}
+
+const projectData = {
+  "Green Hydrogen Production Using Alkaline Water Electrolysis": {
+    description:"Exploring alkaline water electrolysis for green hydrogen production using renewable electricity, with a focus on process simulation and equipment modelling.",
+    tech:["Aspen Plus","Process Simulation","Chemical Engineering"]
+  },
+  "Canned Mushroom Manufacturing Process": {
+    description:"Academic process design project focused on the manufacturing process, unit operations, material balance, and industrial considerations involved in canned mushroom production.",
+    tech:["Material Balance","Unit Operations","Process Design"]
+  },
+  "Rotary Drum Dryer": {
+    description:"Study and design of a rotary drum drying system, including operating principles, heat and mass transfer considerations, and industrial applications.",
+    tech:["Heat Transfer","Mass Transfer","Equipment Design"]
+  },
+  "Vicks VapoRub Purification": {
+    description:"Process study involving purification using short-path distillation and analysis of separation principles.",
+    tech:["Separation Processes","Distillation","Process Analysis"]
+  },
+  "Shoe Polish Manufacturing": {
+    description:"Chemical process industry project covering formulation, manufacturing process, equipment, and industrial production considerations.",
+    tech:["CPI","Formulation","Equipment"]
+  }
+};
+
+const modal = document.querySelector('#projectModal');
+const modalTitle = document.querySelector('#modalTitle');
+const modalDesc = document.querySelector('#modalDesc');
+const modalTech = document.querySelector('#modalTech');
+document.querySelectorAll('[data-project]').forEach(btn => btn.addEventListener('click', () => {
+  const data = projectData[btn.dataset.project];
+  if(!data) return;
+  modalTitle.textContent = btn.dataset.project;
+  modalDesc.textContent = data.description;
+  modalTech.innerHTML = data.tech.map(t => `<span class="tag">${t}</span>`).join('');
+  modal.classList.add('open');
+  document.body.style.overflow='hidden';
+}));
+function closeModal(){ modal.classList.remove('open'); document.body.style.overflow=''; }
+document.querySelector('#modalClose').addEventListener('click', closeModal);
+modal.addEventListener('click', e => { if(e.target === modal) closeModal(); });
+document.addEventListener('keydown', e => { if(e.key === 'Escape') closeModal(); });
+
+document.querySelector('#contactForm').addEventListener('submit', async e => {
+  e.preventDefault();
+  const form = e.currentTarget;
+  const submit = form.querySelector('button[type="submit"]');
+  const name = document.querySelector('#name').value.trim();
+  const email = document.querySelector('#email').value.trim();
+  const message = document.querySelector('#message').value.trim();
+
+  submit.disabled = true;
+  submit.innerHTML = 'Sending…';
+
+  try {
+    // When frontend and backend share the same domain, /api/contact works directly.
+    // If hosted separately, set API_BASE_URL below to your deployed backend URL.
+    const API_BASE_URL = window.API_BASE_URL || '';
+    const response = await fetch(`${API_BASE_URL}/api/contact`, {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({name, email, message})
+    });
+    const result = await response.json();
+    if (!response.ok) throw new Error(result.message || 'Unable to send message.');
+    form.reset();
+    showToast(result.message || 'Message sent successfully.');
+  } catch (error) {
+    showToast(error.message || 'Could not send your message.');
+  } finally {
+    submit.disabled = false;
+    submit.innerHTML = 'Send Message <span>→</span>';
+  }
+});
+
+document.querySelector('#year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
