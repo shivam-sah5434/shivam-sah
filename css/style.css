@@ -40,7 +40,7 @@ h2{font-size:clamp(2rem,4vw,3.2rem);letter-spacing:-.035em}
 .highlight{color:var(--accent)}
 header.nav-wrap{position:fixed;z-index:50;top:0;left:0;right:0;padding:14px 0}
 .nav{height:64px;display:flex;align-items:center;justify-content:space-between;border:1px solid var(--line);background:color-mix(in srgb,var(--surface-solid) 70%,transparent);backdrop-filter:blur(18px);border-radius:18px;padding:0 14px 0 18px;box-shadow:0 10px 35px rgba(0,0,0,.08)}
-.brand{display:flex;align-items:center;flex:0 0 auto;line-height:0}
+.brand{display:flex;align-items:center;flex:0 0 auto;line-height:0};position:relative;gap:0;font-size:0;white-space:nowrap
 .brand-mark{width:124px;height:46px;border-radius:14px;display:grid;place-items:center;padding:2px;background:linear-gradient(135deg,#078fe0 0%,#4f7fff 52%,#8a6fff 100%);box-shadow:0 8px 26px rgba(35,137,224,.28),0 0 0 1px rgba(255,255,255,.45) inset;overflow:hidden;box-sizing:border-box}
 .nav-links{display:flex;align-items:center;gap:4px}
 .nav-links a{position:relative;padding:9px 12px;color:var(--muted);font-size:.88rem;font-weight:650;border-radius:10px}
@@ -234,3 +234,11 @@ footer{background:linear-gradient(180deg,transparent,rgba(9,25,42,.18))}
   .brand-mark{width:98px;height:40px;border-radius:12px;padding:2px}
   .brand-mark img{border-radius:9px}
 }
+
+/* Navbar: logo only — no text beside the logo */
+.nav .brand::before,
+.nav .brand::after,
+.nav .brand-name,
+.nav .brand-text { display:none !important; content:none !important; width:0 !important; margin:0 !important; padding:0 !important; }
+.nav .brand { width:auto !important; min-width:0 !important; }
+.nav .brand-mark { flex:0 0 auto; margin:0 !important; }
