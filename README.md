@@ -1,34 +1,28 @@
-# Shivam Sah — Personal Portfolio
+# Shivam Sah — GitHub Pages Portfolio
 
-A responsive, GitHub Pages-ready personal portfolio built with HTML5, CSS3 and vanilla JavaScript.
+Clean static version of the Shivam Sah portfolio, prepared for GitHub Pages.
 
-## Files
+## Deploy
 
-- `index.html` — maintainable version using separate CSS/JS files
-- `index-single-file.html` — completely standalone one-file version
-- `css/style.css` — visual system, responsive layout, dark/light mode
-- `js/script.js` — theme toggle, mobile menu, reveal animations, active nav, project modal, contact form, back-to-top
-- `images/profile.jpg` — Shivam's supplied profile photo
-- `images/logo.png` — editable SS logo
-- `images/projects/*.svg` — lightweight project placeholders
+1. Upload the contents of this folder to the root of your GitHub repository.
+2. Keep `index.html` at the repository root.
+3. In **Settings → Pages**, choose **Deploy from a branch**, select `main`, and choose `/ (root)`.
+4. After publishing, hard-refresh the site with `Ctrl + Shift + R` if an older CSS version is cached.
 
-## GitHub Pages
+## Structure
 
-Upload the contents of this folder to a GitHub repository and enable **Settings → Pages → Deploy from a branch**.
+- `index.html` — main page
+- `css/style.css` — all site styling
+- `js/script.js` — interactions, animation, theme toggle, project modal, and contact fallback
+- `images/core-profile.jpg` — hero portrait used inside the framed engineering visual
+- `images/profile.png` — About section portrait
+- `images/logo.png` — site logo
+- `images/projects/` — project artwork
 
-For the simplest deployment, keep `index.html` at the repository root.
+## Hero frame fix
 
-## Contact details configured
+The hero portrait is deliberately contained by `.core` and `.core img` with explicit dimensions, overflow clipping, object-fit, and border-radius rules. The final frame rules are also reinforced in the page head so the portrait cannot fall back to its original rectangular shape because of a stale/partial stylesheet.
 
-- Email: `079bch041.shivam@pcampus.edu.np`
-- LinkedIn: `https://www.linkedin.com/in/shivam-sah-376569285/`
-- GitHub repository: `https://github.com/shivam-sah5434/shivam-sah`
-- Facebook: `https://www.facebook.com/shivam.sah.5464`
+## Contact form
 
-The contact form is intentionally backend-free. On GitHub Pages it opens the visitor's default email app with a prefilled message addressed to `079bch041.shivam@pcampus.edu.np`.
-
-Project buttons currently open an on-page project detail modal. Replace those buttons/handlers later if you have project pages or case-study URLs.
-
-## Dynamic background
-
-The portfolio includes a lightweight animated particle/network background. Mouse movement and touchscreen gestures subtly move the background glow and hero content for an interactive depth effect. It automatically respects `prefers-reduced-motion`.
+The site is GitHub Pages compatible. If no backend API is configured, the contact form opens the visitor's default email application with the submitted details. A backend can still be added later by setting `window.API_BASE_URL` before `script.js`.

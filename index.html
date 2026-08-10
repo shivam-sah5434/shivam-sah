@@ -14,6 +14,37 @@
   <title>Shivam Sah | Chemical Engineering Student</title>
   <link rel="icon" type="image/png" href="images/logo.png">
   <link rel="stylesheet" href="css/style.css">
+  <!-- Critical hero-frame lock: keeps the portrait cropped inside the designed frame even if cached CSS is stale. -->
+  <style>
+    .engineering-visual .orbit { position: relative; }
+    .engineering-visual .core {
+      position: absolute !important;
+      inset: 0 !important;
+      margin: auto !important;
+      width: 146px !important;
+      height: 146px !important;
+      padding: 5px !important;
+      border-radius: 40px !important;
+      overflow: hidden !important;
+      display: block !important;
+      box-sizing: border-box !important;
+      z-index: 5 !important;
+    }
+    .engineering-visual .core img {
+      display: block !important;
+      width: 100% !important;
+      height: 100% !important;
+      max-width: none !important;
+      object-fit: cover !important;
+      object-position: center 20% !important;
+      border-radius: 35px !important;
+      overflow: hidden !important;
+    }
+    @media (max-width: 650px) {
+      .engineering-visual .core { width: 112px !important; height: 112px !important; border-radius: 31px !important; }
+      .engineering-visual .core img { border-radius: 27px !important; }
+    }
+  </style>
 </head>
 <body>
 <canvas id="dynamic-bg" aria-hidden="true"></canvas>

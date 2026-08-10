@@ -192,14 +192,23 @@ document.querySelector('#contactForm').addEventListener('submit', async e => {
   const name = document.querySelector('#name').value.trim();
   const email = document.querySelector('#email').value.trim();
   const message = document.querySelector('#message').value.trim();
+  const API_BASE_URL = window.API_BASE_URL || '';
+
+  // GitHub Pages is static. If no backend URL is configured, use mailto instead of
+  // sending a request to a nonexistent /api/contact endpoint.
+  if (!API_BASE_URL) {
+    const subject = encodeURIComponent(`Portfolio contact from ${name}`);
+    const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
+    window.location.href = `mailto:079bch041.shivam@pcampus.edu.np?subject=${subject}&body=${body}`;
+    form.reset();
+    showToast('Opening your email app…');
+    return;
+  }
 
   submit.disabled = true;
   submit.innerHTML = 'Sending…';
 
   try {
-    // When frontend and backend share the same domain, /api/contact works directly.
-    // If hosted separately, set API_BASE_URL below to your deployed backend URL.
-    const API_BASE_URL = window.API_BASE_URL || '';
     const response = await fetch(`${API_BASE_URL}/api/contact`, {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
