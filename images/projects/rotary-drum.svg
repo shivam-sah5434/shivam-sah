@@ -20,6 +20,6 @@
       <path d="M270 390V220H430V390M530 390V170H680V390" fill="none" stroke="#d7e9ff" stroke-opacity=".75" stroke-width="4"/>
       <circle cx="270" cy="390" r="10" fill="#4ecbff"/><circle cx="530" cy="390" r="10" fill="#7c8cff"/>
       <text x="70" y="100" fill="#eef7ff" font-family="Arial, sans-serif" font-size="46" font-weight="700">RD</text>
-      <text x="70" y="455" fill="#a9bfd8" font-family="Arial, sans-serif" font-size="22">Heat & mass transfer</text>
+      <text x="70" y="455" fill="#a9bfd8" font-family="Arial, sans-serif" font-size="22">Heat &amp; mass transfer</text>
       <text x="815" y="455" text-anchor="end" fill="#6f8aa8" font-family="Arial, sans-serif" font-size="20">03</text>
     </svg>

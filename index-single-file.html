@@ -9,7 +9,7 @@
   <meta property="og:title" content="Shivam Sah | Chemical Engineering Student">
   <meta property="og:description" content="Personal portfolio of Shivam Sah, a fourth-year Chemical Engineering student and aspiring process engineer.">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="images/profile.jpg">
+  <meta property="og:image" content="images/profile.png">
   <meta name="twitter:card" content="summary_large_image">
   <title>Shivam Sah | Chemical Engineering Student</title>
   <link rel="icon" type="image/png" href="images/logo.png">
@@ -83,7 +83,7 @@ header.nav-wrap{position:fixed;z-index:50;top:0;left:0;right:0;padding:14px 0}
 .orbit:before,.orbit:after{content:"";position:absolute;inset:12%;border:1px solid rgba(124,140,255,.18);border-radius:50%;transform:rotate(58deg)}
 .orbit:after{inset:26%;transform:rotate(-30deg)}
 .core{width:130px;height:130px;border-radius:36px;display:grid;place-items:center;background:linear-gradient(145deg,rgba(78,203,255,.16),rgba(124,140,255,.12));border:1px solid rgba(130,190,240,.25);box-shadow:0 0 80px rgba(78,203,255,.12);position:absolute;inset:0;margin:auto;backdrop-filter:blur(12px)}
-.core strong{font-size:2rem;letter-spacing:-.06em}
+.core strong{font-size:2rem;letter-spacing:-.06em}.core img{width:100%;height:100%;object-fit:cover;border-radius:inherit;display:block;object-position:center 28%;}
 .node{position:absolute;width:58px;height:58px;border-radius:18px;display:grid;place-items:center;background:var(--surface);border:1px solid var(--line);box-shadow:var(--shadow);font-weight:850;color:var(--accent)}
 .node:nth-child(2){top:8%;left:19%}.node:nth-child(3){top:16%;right:9%}.node:nth-child(4){bottom:13%;right:17%}.node:nth-child(5){bottom:9%;left:13%}
 .flow{position:absolute;width:180px;height:1px;background:linear-gradient(90deg,transparent,var(--accent),transparent);transform-origin:left;opacity:.55}
@@ -155,13 +155,91 @@ footer{border-top:1px solid var(--line);padding:35px 0}
 
 .hero .container{transform:translate3d(var(--hero-x,0px),var(--hero-y,0px),0);transition:transform .18s ease-out}
 @media(max-width:650px){.hero .container{transform:none}}
+/* --- Premium visual polish --- */
+:root{
+  --accent:#49d7ff;
+  --accent-2:#8a7dff;
+  --accent-3:#66e3c1;
+  --gold:#f5c56a;
+  --surface:rgba(13,31,51,.78);
+  --line:rgba(150,202,235,.16);
+}
+body{
+  background:
+    radial-gradient(circle at 80% 8%,rgba(73,215,255,.14),transparent 27%),
+    radial-gradient(circle at 12% 44%,rgba(138,125,255,.10),transparent 28%),
+    radial-gradient(circle at 75% 85%,rgba(102,227,193,.06),transparent 22%),var(--bg);
+}
+body:after{
+  background:
+    radial-gradient(circle at var(--mx,50%) var(--my,50%),rgba(73,215,255,.11),transparent 18%),
+    radial-gradient(circle at calc(100% - var(--mx,50%)) calc(100% - var(--my,50%)),rgba(138,125,255,.09),transparent 22%);
+}
+.nav{
+  border-color:rgba(121,202,238,.2);
+  box-shadow:0 16px 45px rgba(0,0,0,.18),inset 0 1px 0 rgba(255,255,255,.035);
+}
+.brand-mark{
+  width:38px;height:38px;border-radius:12px;padding:2px;
+  background:linear-gradient(135deg,var(--accent),var(--accent-2));
+  box-shadow:0 7px 24px rgba(73,215,255,.24);
+  overflow:hidden;
+}
+.brand-mark img{width:100%;height:100%;object-fit:contain;object-position:center;border-radius:10px;filter:saturate(1.04) contrast(1.02);padding:1px;box-sizing:border-box}
+.brand span:last-child{font-size:1rem}
+.hero h1 span{background:linear-gradient(100deg,#f2f8ff 10%,var(--accent) 52%,#a38dff 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.btn-primary{background:linear-gradient(120deg,var(--accent),#6fb9ff 52%,#9b87ff);box-shadow:0 14px 34px rgba(73,215,255,.2)}
+.btn-primary:hover{box-shadow:0 18px 40px rgba(73,215,255,.28)}
+.btn-secondary{border-color:rgba(126,190,225,.22);box-shadow:inset 0 1px 0 rgba(255,255,255,.03)}
+.engineering-visual{filter:drop-shadow(0 24px 60px rgba(0,0,0,.16))}
+.orbit{border-color:rgba(73,215,255,.23);box-shadow:inset 0 0 60px rgba(73,215,255,.025)}
+.orbit:before{border-color:rgba(138,125,255,.22)}
+.orbit:after{border-color:rgba(102,227,193,.18)}
+.core{
+  width:146px;height:146px;border-radius:40px;padding:4px;
+  background:linear-gradient(145deg,rgba(73,215,255,.34),rgba(138,125,255,.28));
+  border:1px solid rgba(177,226,255,.32);
+  box-shadow:0 0 0 8px rgba(73,215,255,.035),0 0 90px rgba(73,215,255,.18),0 25px 70px rgba(0,0,0,.25);
+}
+.core img{width:100%;height:100%;object-fit:cover;object-position:center 20%;border-radius:35px;filter:saturate(1.03) contrast(1.03)}
+.node{background:linear-gradient(145deg,rgba(18,43,68,.9),rgba(13,27,45,.88));border-color:rgba(126,196,231,.19);box-shadow:0 18px 40px rgba(0,0,0,.22),inset 0 1px 0 rgba(255,255,255,.04)}
+.node:hover{border-color:rgba(73,215,255,.42);box-shadow:0 0 30px rgba(73,215,255,.1)}
+.flow{background:linear-gradient(90deg,transparent,var(--accent),#9a8cff,transparent);opacity:.65}
+.profile-frame{border-color:rgba(130,205,235,.22);box-shadow:0 28px 80px rgba(0,0,0,.26),0 0 0 1px rgba(73,215,255,.05)}
+.profile-frame img{filter:saturate(.98) contrast(1.02)}
+.skill,.project-card,.timeline-card,.edu-card,.form,.info,.contact-item{box-shadow:inset 0 1px 0 rgba(255,255,255,.025)}
+.skill:hover,.project-card:hover{box-shadow:0 22px 55px rgba(0,0,0,.2),0 0 0 1px rgba(73,215,255,.06)}
+.project-media{position:relative}
+.project-media:after{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(73,215,255,.05),transparent 42%,rgba(138,125,255,.06));pointer-events:none}
+.project-media img{object-position:center}
+.project-num{color:#67dcff}
+.tag{background:rgba(73,215,255,.045)}
+.socials{gap:10px}
+.social{
+  width:46px;height:46px;border-radius:14px;position:relative;overflow:hidden;
+  color:var(--muted);background:linear-gradient(145deg,rgba(19,40,63,.9),rgba(10,23,39,.86));
+  border-color:rgba(130,195,225,.19);
+  box-shadow:0 12px 28px rgba(0,0,0,.16),inset 0 1px 0 rgba(255,255,255,.035);
+}
+.social:before{content:"";position:absolute;inset:-1px;border-radius:inherit;background:radial-gradient(circle at 50% 0,var(--social-color),transparent 58%);opacity:.11;transition:.25s}
+.social svg{width:20px;height:20px;fill:currentColor;position:relative;z-index:1;transition:transform .25s,color .25s,filter .25s}
+.social:hover{transform:translateY(-5px) scale(1.03);color:var(--social-color);border-color:color-mix(in srgb,var(--social-color) 50%,transparent);box-shadow:0 15px 35px color-mix(in srgb,var(--social-color) 18%,transparent)}
+.social:hover:before{opacity:.24}
+.social:hover svg{transform:scale(1.12);filter:drop-shadow(0 0 7px color-mix(in srgb,var(--social-color) 60%,transparent))}
+.social-linkedin{--social-color:#38a8ff}.social-email{--social-color:#38a8ff}.social-facebook{--social-color:#4d8cff}
+footer{background:linear-gradient(180deg,transparent,rgba(9,25,42,.18))}
+@media(max-width:650px){
+  .core{width:112px;height:112px;border-radius:31px}.core img{border-radius:27px}
+  .social{width:44px;height:44px}
+}
+
 </style>
 </head>
 <body>
 <canvas id="dynamic-bg" aria-hidden="true"></canvas>
 <header class="nav-wrap">
   <nav class="nav container" aria-label="Primary navigation">
-    <a class="brand" href="#home" aria-label="Shivam Sah home"><span class="brand-mark">SS</span><span>Shivam</span></a>
+    <a class="brand" href="#home" aria-label="Shivam Sah home"><span class="brand-mark"><img src="images/logo.png" alt="Shivam logo" loading="eager"></span><span>Shivam</span></a>
     <div class="nav-links" id="navLinks">
       <a class="active" href="#home">Home</a><a href="#about">About</a><a href="#skills">Skills</a>
       <a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#education">Education</a><a href="#contact">Contact</a>
@@ -190,7 +268,7 @@ footer{border-top:1px solid var(--line);padding:35px 0}
       <div class="orbit">
         <div class="node">H₂</div><div class="node">PFD</div><div class="node">SIM</div><div class="node">CPI</div>
         <div class="flow one"></div><div class="flow two"></div><div class="flow three"></div><div class="flow four"></div>
-        <div class="core"><strong>SS</strong></div>
+        <div class="core"><img src="images/core-profile.jpg" alt="Shivam Sah" loading="eager"></div>
       </div>
     </div>
   </div>
@@ -200,7 +278,7 @@ footer{border-top:1px solid var(--line);padding:35px 0}
   <div class="container about-grid">
     <div class="profile-card reveal">
       <div class="profile-glow"></div>
-      <div class="profile-frame"><img src="images/profile.jpg" alt="Shivam Sah in formal attire" loading="lazy"></div>
+      <div class="profile-frame"><img src="images/profile.png" alt="Shivam Sah in formal attire" loading="lazy"></div>
     </div>
     <div class="about-copy reveal">
       <div class="section-head"><div class="eyebrow">About Me</div><h2>Engineering ideas into practical solutions.</h2></div>
@@ -241,7 +319,7 @@ footer{border-top:1px solid var(--line);padding:35px 0}
     <div class="project-grid">
       <article class="project-card reveal"><div class="project-media"><img src="images/projects/green-hydrogen.svg" alt="Green hydrogen project placeholder" loading="lazy"></div><div class="project-body"><div class="project-num">01 · SUSTAINABLE ENERGY</div><h3>Green Hydrogen Production Using Alkaline Water Electrolysis</h3><p>Exploring alkaline water electrolysis for green hydrogen production using renewable electricity, with a focus on process simulation and equipment modelling.</p><div class="tags"><span class="tag">Aspen Plus</span><span class="tag">Process Simulation</span><span class="tag">Chemical Engineering</span></div><button class="text-btn" data-project="Green Hydrogen Production Using Alkaline Water Electrolysis">View Project →</button></div></article>
       <article class="project-card reveal"><div class="project-media"><img src="images/projects/canned-mushroom.svg" alt="Canned mushroom manufacturing project placeholder" loading="lazy"></div><div class="project-body"><div class="project-num">02 · PROCESS DESIGN</div><h3>Canned Mushroom Manufacturing Process</h3><p>Academic process design project focused on the manufacturing process, unit operations, material balance, and industrial considerations involved in canned mushroom production.</p><div class="tags"><span class="tag">Material Balance</span><span class="tag">Unit Operations</span><span class="tag">Process Design</span></div><button class="text-btn" data-project="Canned Mushroom Manufacturing Process">View Project →</button></div></article>
-      <article class="project-card reveal"><div class="project-media"><img src="images/projects/rotary-drum.svg" alt="Rotary drum dryer project placeholder" loading="lazy"></div><div class="project-body"><div class="project-num">03 · EQUIPMENT DESIGN</div><h3>Rotary Drum Dryer</h3><p>Study and design of a rotary drum drying system, including operating principles, heat and mass transfer considerations, and industrial applications.</p><div class="tags"><span class="tag">Heat Transfer</span><span class="tag">Mass Transfer</span><span class="tag">Equipment Design</span></div><button class="text-btn" data-project="Rotary Drum Dryer">View Project →</button></div></article>
+      <article class="project-card reveal"><div class="project-media"><img src="images/projects/rotary-drum.png" alt="Rotary drum dryer process design illustration" loading="lazy"></div><div class="project-body"><div class="project-num">03 · EQUIPMENT DESIGN</div><h3>Rotary Drum Dryer</h3><p>Study and design of a rotary drum drying system, including operating principles, heat and mass transfer considerations, and industrial applications.</p><div class="tags"><span class="tag">Heat Transfer</span><span class="tag">Mass Transfer</span><span class="tag">Equipment Design</span></div><button class="text-btn" data-project="Rotary Drum Dryer">View Project →</button></div></article>
       <article class="project-card reveal"><div class="project-media"><img src="images/projects/vicks-purification.svg" alt="Vicks VapoRub purification project placeholder" loading="lazy"></div><div class="project-body"><div class="project-num">04 · SEPARATION</div><h3>Vicks VapoRub Purification</h3><p>Process study involving purification using short-path distillation and analysis of separation principles.</p><div class="tags"><span class="tag">Separation Processes</span><span class="tag">Distillation</span><span class="tag">Process Analysis</span></div><button class="text-btn" data-project="Vicks VapoRub Purification">View Project →</button></div></article>
       <article class="project-card reveal"><div class="project-media"><img src="images/projects/shoe-polish.svg" alt="Shoe polish manufacturing project placeholder" loading="lazy"></div><div class="project-body"><div class="project-num">05 · CHEMICAL INDUSTRY</div><h3>Shoe Polish Manufacturing</h3><p>Chemical process industry project covering formulation, manufacturing process, equipment, and industrial production considerations.</p><div class="tags"><span class="tag">CPI</span><span class="tag">Formulation</span><span class="tag">Equipment</span></div><button class="text-btn" data-project="Shoe Polish Manufacturing">View Project →</button></div></article>
     </div>
@@ -282,7 +360,6 @@ footer{border-top:1px solid var(--line);padding:35px 0}
           <!-- Replace placeholder URLs/email with Shivam's real details. -->
           <a class="contact-item" href="mailto:079bch041.shivam@pcampus.edu.np"><span class="contact-icon">✉</span><span><small>Email</small><strong>079bch041.shivam@pcampus.edu.np</strong></span></a>
           <a class="contact-item" href="https://www.linkedin.com/in/shivam-sah-376569285/" target="_blank" rel="noopener"><span class="contact-icon">in</span><span><small>LinkedIn</small><strong>linkedin.com/in/shivam-sah-376569285</strong></span></a>
-          <a class="contact-item" href="https://github.com/shivam-sah5434/shivam-sah" target="_blank" rel="noopener"><span class="contact-icon">⌘</span><span><small>GitHub</small><strong>github.com/shivam-sah5434/shivam-sah</strong></span></a>
           <a class="contact-item" href="https://www.facebook.com/shivam.sah.5464" target="_blank" rel="noopener"><span class="contact-icon">f</span><span><small>Facebook</small><strong>facebook.com/shivam.sah.5464</strong></span></a>
         </div>
       </div>
@@ -300,7 +377,17 @@ footer{border-top:1px solid var(--line);padding:35px 0}
 <footer>
   <div class="container footer-row">
     <div><div class="footer-brand">Shivam Sah</div><div>Chemical Engineering Student | Future Process Engineer</div><div>Lalitpur, Nepal · © <span id="year">2026</span> Shivam Sah. All rights reserved.</div></div>
-    <div class="socials"><a class="social" href="https://www.linkedin.com/in/shivam-sah-376569285/" aria-label="LinkedIn" target="_blank" rel="noopener">in</a><a class="social" href="https://github.com/shivam-sah5434/shivam-sah" aria-label="GitHub" target="_blank" rel="noopener">⌘</a><a class="social" href="https://www.facebook.com/shivam.sah.5464" aria-label="Facebook" target="_blank" rel="noopener">f</a></div>
+    <div class="socials" aria-label="Social media links">
+      <a class="social social-linkedin" href="https://www.linkedin.com/in/shivam-sah-376569285/" aria-label="LinkedIn" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 8.5H3.7V20h2.8V8.5ZM5.1 4A1.7 1.7 0 1 0 5.1 7.4 1.7 1.7 0 0 0 5.1 4ZM20.3 13.4c0-3.5-1.9-5.1-4.4-5.1-2 0-2.9 1.1-3.4 1.8V8.5H9.7V20h2.8v-5.7c0-1.5.3-3 2.2-3 1.9 0 1.9 1.7 1.9 3.1V20h2.8v-6.6Z"/></svg>
+      </a>
+      <a class="social social-email" href="mailto:079bch041.shivam@pcampus.edu.np" aria-label="Email">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 5.5h17A1.5 1.5 0 0 1 22 7v10a1.5 1.5 0 0 1-1.5 1.5h-17A1.5 1.5 0 0 1 2 17V7a1.5 1.5 0 0 1 1.5-1.5Zm0 2.2v.1l8.5 5.7 8.5-5.7v-.1h-17Zm17 2.7-7.7 5.2a1.4 1.4 0 0 1-1.6 0L3.5 10.4V17h17v-6.6Z"/></svg>
+      </a>
+      <a class="social social-facebook" href="https://www.facebook.com/shivam.sah.5464" aria-label="Facebook" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 21v-8h2.7l.4-3h-3.1V8.1c0-.9.3-1.5 1.6-1.5h1.7V4a21 21 0 0 0-2.4-.1c-2.4 0-4 1.4-4 4V10H7.7v3h2.7v8h3.1Z"/></svg>
+      </a>
+    </div>
   </div>
 </footer>
 
