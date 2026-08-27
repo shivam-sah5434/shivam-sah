@@ -1,0 +1,15 @@
+{
+  "name": "Shivam Sah | Chemical Engineering Student",
+  "short_name": "Shivam Sah",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#07101d",
+  "theme_color": "#07101d",
+  "icons": [
+    {
+      "src": "/images/logo.png",
+      "sizes": "any",
+      "type": "image/png"
+    }
+  ]
+}

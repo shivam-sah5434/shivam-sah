@@ -26,3 +26,15 @@ The hero portrait is deliberately contained by `.core` and `.core img` with expl
 ## Contact form
 
 The site is GitHub Pages compatible. If no backend API is configured, the contact form opens the visitor's default email application with the submitted details. A backend can still be added later by setting `window.API_BASE_URL` before `script.js`.
+
+## SEO deployment notes
+
+This version includes a canonical URL, crawl directives, Open Graph/Twitter metadata, Person + WebSite structured data, `robots.txt`, `sitemap.xml`, and a web manifest for `https://shivams.com.np/`.
+
+After deploying the files to GitHub Pages:
+1. Confirm `https://shivams.com.np/robots.txt` loads.
+2. Confirm `https://shivams.com.np/sitemap.xml` loads.
+3. Add/verify the domain in Google Search Console.
+4. Submit the sitemap URL and request indexing for `https://shivams.com.np/`.
+
+A Google Search Console verification token is intentionally not hard-coded because it is unique to the verified Search Console property.
