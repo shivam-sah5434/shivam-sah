@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520">
+      <defs>
+        <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#081426"/>
+          <stop offset="100%" stop-color="#102844"/>
+        </linearGradient>
+        <linearGradient id="a" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0%" stop-color="#4ecbff"/>
+          <stop offset="100%" stop-color="#7c8cff"/>
+        </linearGradient>
+      </defs>
+      <rect width="900" height="520" fill="url(#g)"/>
+      <g opacity=".13" stroke="#b9d8ff" stroke-width="1">
+        <path d="M0 40H900"/><path d="M0 80H900"/><path d="M0 120H900"/><path d="M0 160H900"/><path d="M0 200H900"/><path d="M0 240H900"/><path d="M0 280H900"/><path d="M0 320H900"/><path d="M0 360H900"/><path d="M0 400H900"/><path d="M0 440H900"/><path d="M0 480H900"/>
+        <path d="M40 0V520"/><path d="M80 0V520"/><path d="M120 0V520"/><path d="M160 0V520"/><path d="M200 0V520"/><path d="M240 0V520"/><path d="M280 0V520"/><path d="M320 0V520"/><path d="M360 0V520"/><path d="M400 0V520"/><path d="M440 0V520"/><path d="M480 0V520"/><path d="M520 0V520"/><path d="M560 0V520"/><path d="M600 0V520"/><path d="M640 0V520"/><path d="M680 0V520"/><path d="M720 0V520"/><path d="M760 0V520"/><path d="M800 0V520"/><path d="M840 0V520"/><path d="M880 0V520"/>
+      </g>
+      <circle cx="760" cy="120" r="105" fill="none" stroke="#4ecbff" stroke-opacity=".18" stroke-width="2"/>
+      <circle cx="760" cy="120" r="70" fill="none" stroke="#7c8cff" stroke-opacity=".25" stroke-width="2"/>
+      <path d="M70 390H270L335 315H530L600 390H830" fill="none" stroke="url(#a)" stroke-width="7" stroke-linecap="round"/>
+      <path d="M270 390V220H430V390M530 390V170H680V390" fill="none" stroke="#d7e9ff" stroke-opacity=".75" stroke-width="4"/>
+      <circle cx="270" cy="390" r="10" fill="#4ecbff"/><circle cx="530" cy="390" r="10" fill="#7c8cff"/>
+      <text x="70" y="100" fill="#eef7ff" font-family="Arial, sans-serif" font-size="46" font-weight="700">PM</text>
+      <text x="70" y="455" fill="#a9bfd8" font-family="Arial, sans-serif" font-size="22">Process manufacturing design</text>
+      <text x="815" y="455" text-anchor="end" fill="#6f8aa8" font-family="Arial, sans-serif" font-size="20">02</text>
+    </svg>
